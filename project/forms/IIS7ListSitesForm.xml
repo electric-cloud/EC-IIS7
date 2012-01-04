@@ -1,0 +1,13 @@
+<editor>
+	<help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#ListSites</help>
+	<label>Application Server - IIS7 ListSites</label>
+	<version>@PLUGIN_VERSION@</version>
+	<description>List the sites on a web server.</description>	
+	<formElement>
+		<type>textarea</type>
+		<label>User-defined criterias:</label>
+		<property>searchcriteria</property>
+		<required>0</required>
+		<documentation>The user-defined criterias to search the sites. Blank lists all sites. i.e: '/bindings:http/*:80:'.</documentation>
+	</formElement>			
+</editor>

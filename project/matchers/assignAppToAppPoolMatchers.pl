@@ -6,7 +6,7 @@ push (@::gMatchers,
    pattern =>          q{Application (.+) moved to Application Pool (.+)},
    action =>           q{
     
-              my $description = "Application $1 moved to Application Pool $2";
+              my $description = "Application $1 moved \n to Application Pool $2";
               setProperty("summary", $description . "\n");
     
    },
@@ -17,7 +17,7 @@ push (@::gMatchers,
    pattern =>          q{APPPOOL object "(.+)" added},
    action =>           q{
     
-              my $description = "Application Pool $1 created successfully";
+              my $description = "Application Pool $1 \n created successfully";
               setProperty("summary", $description . "\n");
     
    },
@@ -28,7 +28,7 @@ push (@::gMatchers,
    pattern =>          q{.*Cannot find SITE object with identifier "(.+)".*},
    action =>           q{
     
-              my $description = "Site $1 doesn't exist";
+              my $description = "Site $1 \n doesn't exist";
               setProperty("summary", $description . "\n");
     
    },
@@ -39,7 +39,7 @@ push (@::gMatchers,
    pattern =>          q{Application Pool (.+) doesn't exist},
    action =>           q{
     
-              my $description = "Application Pool $1 doesn't exist";
+              my $description = "Application Pool \n $1 doesn't exist";
               setProperty("summary", $description . "\n");
     
    },

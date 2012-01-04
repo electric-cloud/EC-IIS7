@@ -5,7 +5,7 @@ push (@::gMatchers,
    pattern =>          q{"(.+)" successfully stopped},
    action =>           q{
     
-              my $description = "Server $1 Stopped";
+              my $description = "Site $1 \n Stopped";
               setProperty("summary", $description . "\n");
     
    },

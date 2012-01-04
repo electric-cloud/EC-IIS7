@@ -42,6 +42,12 @@ $errors .= $ec->checkAllErrors($xpath);
 
 # Attach credential to steps that will need it
 $xpath = $ec->attachCredential($projName, $credName,
+    {procedureName => 'AddWebSiteBinding',
+     stepName => 'AddWebSiteBinding'});
+$errors .= $ec->checkAllErrors($xpath);
+
+
+$xpath = $ec->attachCredential($projName, $credName,
     {procedureName => 'AssignAppToAppPool',
      stepName => 'AssignApp'});
 $errors .= $ec->checkAllErrors($xpath);
@@ -81,6 +87,21 @@ $xpath = $ec->attachCredential($projName, $credName,
      stepName => 'Deploy'});
 $errors .= $ec->checkAllErrors($xpath);
 
+$xpath = $ec->attachCredential($projName, $credName,
+    {procedureName => 'CreateWebSite',
+     stepName => 'CreateWebSite'});
+$errors .= $ec->checkAllErrors($xpath);
+ 
+$xpath = $ec->attachCredential($projName, $credName,
+    {procedureName => 'DeleteWebSite',
+     stepName => 'DeleteWebSite'});
+$errors .= $ec->checkAllErrors($xpath);
+ 
+$xpath = $ec->attachCredential($projName, $credName,
+    {procedureName => 'DeleteAppPool',
+     stepName => 'DeleteAppPool'});
+$errors .= $ec->checkAllErrors($xpath);
+ 
 $xpath = $ec->attachCredential($projName, $credName,
     {procedureName => 'ListSiteApps',
      stepName => 'ListSiteApps'});

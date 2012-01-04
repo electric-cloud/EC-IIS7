@@ -6,7 +6,7 @@ push (@::gMatchers,
    pattern =>          q{App Pool (.+) already exists.},
    action =>           q{
     
-              my $description = "Application Pool $1 already exists";
+              my $description = "Application Pool $1 \n already exists";
               setProperty("summary", $description . "\n");
     
    },
@@ -17,7 +17,7 @@ push (@::gMatchers,
    pattern =>          q{APPPOOL object "(.+)" added},
    action =>           q{
     
-              my $description = "Application Pool $1 created successfully";
+              my $description = "Application Pool $1 \n created successfully";
               setProperty("summary", $description . "\n");
     
    },
@@ -28,7 +28,7 @@ push (@::gMatchers,
    pattern =>          q{Cannot find APP object with identifier "(.+)"},
    action =>           q{
     
-              my $description = "Cannot find Application $1";
+              my $description = "Cannot find Application \n $1";
               setProperty("summary", $description . "\n");
     
    },

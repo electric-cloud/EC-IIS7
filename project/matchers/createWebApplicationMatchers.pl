@@ -6,7 +6,7 @@ push (@::gMatchers,
    pattern =>          q{APP object "(.+)" added},
    action =>           q{
     
-              my $description = "Web Application $1 created successfully";
+              my $description = "Web Application $1 \n created successfully";
               setProperty("summary", $description . "\n");
     
    },

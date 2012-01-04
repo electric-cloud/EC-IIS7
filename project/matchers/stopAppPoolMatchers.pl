@@ -5,7 +5,7 @@ push (@::gMatchers,
    pattern =>          q{"(.+)" successfully stopped},
    action =>           q{
     
-              my $description = "Application Pool $1 stopped successfully";
+              my $description = "Application Pool $1 \n stopped successfully";
                               
               setProperty("summary", $description . "\n");
     
@@ -17,7 +17,7 @@ push (@::gMatchers,
    pattern =>          q{.*Cannot find APPPOOL object with identifier "(.+)".*},
    action =>           q{
     
-              my $description = "Cannot find Application Pool $1";
+              my $description = "Cannot find Application \n Pool $1";
                               
               setProperty("summary", $description . "\n");
     

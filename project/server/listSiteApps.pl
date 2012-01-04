@@ -104,7 +104,11 @@
     my $appcmdLocation = DEFAULT_APPCMD_PATH;
     my %props;
     
-    $cmdLine = "$appcmdLocation list app /site.name:\"$::gSiteName\"";
+	if ($::gSiteName && $::gSiteName ne '') {
+		$cmdLine = "$appcmdLocation list app /site.name:\"$::gSiteName\"";
+	} else {
+		$cmdLine = "$appcmdLocation list app";
+	}
   
     #execute command line that creates the app pool
     print "===========App Search Results===========\n";

@@ -1,0 +1,13 @@
+<editor>
+	<help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#DeleteAppPool</help>
+	<label>Application Server - IIS7 DeleteAppPool</label>
+	<version>@PLUGIN_VERSION@</version>
+	<description>Deletes an application pool.</description>	
+	<formElement>
+		<type>entry</type>
+		<label>Application pool name:</label>
+		<property>apppoolname</property>
+		<required>1</required>
+		<documentation>The name of the application pool to delete. (Required)</documentation>
+	</formElement>		
+</editor>

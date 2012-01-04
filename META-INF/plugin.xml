@@ -6,7 +6,7 @@
     <description>Internet Information Services Application Server</description>
     <author>Electric Cloud</author>
     <configure>configurations.xml</configure>
-    <help>help.xml</help>
+    <help>EC-IIS7_help.xml</help>
     <authorUrl>http://www.electric-cloud.com/support</authorUrl>
     <category>Application Server</category>
     <commander-version min="3.6"/>

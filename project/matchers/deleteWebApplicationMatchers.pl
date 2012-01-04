@@ -6,7 +6,7 @@ push (@::gMatchers,
    pattern =>          q{APP object "(.+)" deleted},
    action =>           q{
     
-              my $description = "Web Application $1 deleted successfully";
+              my $description = "Web Application $1 \n deleted successfully";
               setProperty("summary", $description . "\n");
     
    },

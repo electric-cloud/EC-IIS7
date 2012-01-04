@@ -6,7 +6,7 @@ push (@::gMatchers,
    pattern =>          q{VDIR object "(.+)" deleted},
    action =>           q{
     
-              my $description = "Virtual Directory $1 deleted successfully";
+              my $description = "Virtual Directory $1 \n deleted successfully";
               setProperty("summary", $description . "\n");
     
    },

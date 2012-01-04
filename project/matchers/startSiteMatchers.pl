@@ -5,7 +5,7 @@ push (@::gMatchers,
    pattern =>          q{"(.+)" successfully started},
    action =>           q{
     
-              my $description = "Server $1 Started";
+              my $description = "Site $1 \n Started";
               setProperty("summary", $description . "\n");
     
    },
@@ -16,7 +16,7 @@ push (@::gMatchers,
    pattern =>          q{The system cannot find the path specified},
    action =>           q{
     
-              my $description = "AppCmd utility not found";
+              my $description = "AppCmd utility \n not found";
               setProperty("summary", $description . "\n");
     
    },

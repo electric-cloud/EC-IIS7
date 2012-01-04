@@ -1,0 +1,13 @@
+<editor>
+	<help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#StartWebSite</help>
+	<label>Application Server - IIS7 StartWebSite</label>
+	<version>@PLUGIN_VERSION@</version>
+	<description>Starts a website into an IIS Server.</description>	
+	<formElement>
+		<type>entry</type>
+		<label>Website name:</label>
+		<property>sitename</property>
+		<required>1</required>
+		<documentation>Provide the descriptive name of the website you want to start. i.e: 'Default Web Site'. (Required)</documentation>
+	</formElement>			
+</editor>

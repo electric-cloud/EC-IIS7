@@ -6,7 +6,7 @@ push (@::gMatchers,
    pattern =>          q{VDIR object "(.+)" added},
    action =>           q{
     
-              my $description = "Virtual Directory $1 created successfully";
+              my $description = "Virtual Directory $1 \n created successfully";
               setProperty("summary", $description . "\n");
     
    },

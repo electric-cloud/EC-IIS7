@@ -1,0 +1,13 @@
+<editor>
+	<help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#CreateAppPool</help>
+	<label>Application Server - IIS7 CreateAppPool</label>
+	<version>@PLUGIN_VERSION@</version>
+	<description>Verifies if an Application Pool exists and if it doesn't, an IIS application pool is created.</description>	
+	<formElement>
+		<type>entry</type>
+		<label>Application pool name:</label>
+		<property>apppoolname</property>
+		<required>1</required>
+		<documentation>The name of the Application Pool to create. i.e: 'FirstAppPool'. (Required)</documentation>
+	</formElement>		
+</editor>
