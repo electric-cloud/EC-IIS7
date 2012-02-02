@@ -12,7 +12,7 @@
    #    16/12/2011
    #
    # Engineer
-   #    Rafael Sánchez
+   #    Rafael Sanchez
    #
    # Copyright (c) 2011 Electric Cloud, Inc.
    # All rights reserved
