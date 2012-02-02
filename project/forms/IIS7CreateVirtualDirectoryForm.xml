@@ -8,7 +8,7 @@
 		<label>Application name:</label>
 		<property>appname</property>
 		<required>1</required>
-		<documentation>The website and virtual path to contain the Virtual Directory to create, i.e: 'Default Web Site/' or 'Site1/myapp'. (Required)</documentation>
+		<documentation>The website and virtual path to contain the Virtual Directory to create, i.e: 'Default Web Site/myapp02'. (Required)</documentation>
 	</formElement>		
 	<formElement>
 		<type>entry</type>

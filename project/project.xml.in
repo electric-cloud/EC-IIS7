@@ -1159,7 +1159,7 @@
             <formalParameter>
                 <formalParameterName>appname</formalParameterName>
                 <defaultValue/>
-                <description>The WebSite and virtual path to contain the Virtual Directory to create, i.e: 'Default Web Site/' or 'Site1/myapp'. (Required)</description>
+                <description>The website and virtual path to contain the Virtual Directory to create, i.e: 'Default Web Site/myapp02'. (Required)</description>
                 <required>1</required>
                 <type>entry</type>
             </formalParameter>
