@@ -291,7 +291,8 @@ ntest "checkServerStatus", {}, sub {
       $xpath = $::N->getJobDetails($jobId);
    
       # get the value of the commands lines
-      #my $commandLine = $xpath->findvalue("//property[propertyName='checkServerStatusLine']/value");
+      my $commandLine = $xpath->findvalue("//property[propertyName='checkServerStatusLine']/value");
+      assertEq($commandLine, '127.0.0.1:8081');
 
 };
 

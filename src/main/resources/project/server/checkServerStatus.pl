@@ -123,15 +123,15 @@
             if($configuration{'user'} && $configuration{'user'} ne ''){
                 $user = $configuration{'user'};
             }else{
-#                print 'Could not get user from configuration '. $::gConfigName;
-#                exit ERROR;
+                #print 'Could not get user from configuration '. $::gConfigName;
+                #exit ERROR;
             }
         }
         if($configuration{'password'} && $configuration{'password'} ne ''){
             $pass = $configuration{'password'};
         }else{
-#            print 'Could not get password from configuration '. $::gConfigName;
-#            exit ERROR;
+            #print 'Could not get password from configuration '. $::gConfigName;
+            #exit ERROR;
         }
         
     }
@@ -162,8 +162,9 @@
     
         print "Error: ", $response->status_line(), "\n";
     
-    }
-    
+    }	
+	$props{'checkServerStatusLine'} = $url;
+	setProperties(\%props);
   }
   
   ########################################################################
