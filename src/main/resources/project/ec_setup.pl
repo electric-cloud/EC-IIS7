@@ -167,7 +167,26 @@ my %stopWebSite = (
     description => "Stops an IIS Website.",
     category    => "Application Server"
 );
-	                 
+
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Check Server Status");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Add Website Binding");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Assign App To App Pool");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Create App Pool");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Create Virtual Directory");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Create Web Application");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Create Website");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Delete App Pool");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Delete Virtual Directory");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Delete Web Application");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Delete Website");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Deploy Copy");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - List Site Apps");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - List Sites");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Start App Pool");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Start Website");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Stop App Pool");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/IIS7 - Stop Website");
+
 @::createStepPickerSteps = (\%checkServerStatus, \%addWebSiteBinding,
                             \%assignAppToAppPool, \%createAppPool,
                             \%createVirtualDirectory, \%createWebApplication,
