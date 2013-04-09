@@ -225,7 +225,7 @@ ntest "setup-create configuration", {}, sub {
         $jobId  = $xpath->findvalue("//jobId");
         $status = $xpath->findvalue("//status");
 
-        assertTrue($jobId && int($jobId) > 0,'valid job id');
+        assertTrue($jobId && $jobId ne "",'valid job id');
         assertEq('completed',$status,"job $jobId complete");
 
         #abort if job did not finish
@@ -278,7 +278,7 @@ ntest "checkServerStatus", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -322,7 +322,7 @@ ntest "deleteVirtualDirectory", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -366,7 +366,7 @@ ntest "createVirtualDirectory", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -410,7 +410,7 @@ ntest "startWebSite", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -454,7 +454,7 @@ ntest "stopWebSite", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -498,7 +498,7 @@ ntest "assignAppToPool", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -545,7 +545,7 @@ ntest "createAppPool", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -591,7 +591,7 @@ ntest "createWebApp", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -635,7 +635,7 @@ ntest "deploy", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -678,7 +678,7 @@ ntest "listSitesByBinding", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -722,7 +722,7 @@ ntest "startAppPool-NameWithSpaces", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
@@ -767,7 +767,7 @@ ntest "stopAppPool-FakePool", {}, sub {
           $status = $xpath->findvalue("//status");
           $outcome = $xpath->findvalue("//outcome");
   
-          assertTrue($jobId && int($jobId) > 0,'valid job id');
+          assertTrue($jobId && $jobId ne "",'valid job id');
           assertEq('completed',$status,"job $jobId complete");
   
           #abort if job did not finish
