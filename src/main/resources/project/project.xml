@@ -125,7 +125,7 @@
         <procedure>
             <procedureName>CreateConfiguration</procedureName>
             <description>Create a IIS configuration</description>
-            <jobNameTemplate>iis7-cfg-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-cfg-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
                 <property>
@@ -302,7 +302,7 @@
         <procedure>
             <procedureName>DeleteConfiguration</procedureName>
             <description>Delete an IIS configuration</description>
-            <jobNameTemplate>iis7-cfg-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-cfg-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
                 <property>
@@ -373,7 +373,7 @@
         <procedure>
             <procedureName>StartWebSite</procedureName>
             <description>Start a Website into an IIS Server</description>
-            <jobNameTemplate>iis7-startwebsite-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis7-startwebsite-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -452,7 +452,7 @@
         <procedure>
             <procedureName>StopWebSite</procedureName>
             <description>Stop a Website into an IIS Server</description>
-            <jobNameTemplate>iis7-stopwebsite-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis7-stopwebsite-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -532,7 +532,7 @@
         <procedure>
             <procedureName>CreateAppPool</procedureName>
             <description>Verifies if an Application Pool exists and if it doesn't, an IIS application pool is created.</description>
-            <jobNameTemplate>iis7-createapppool-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-createapppool-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -610,7 +610,7 @@
         <procedure>
             <procedureName>StartAppPool</procedureName>
             <description>Starts an Application Pool.</description>
-            <jobNameTemplate>iis7-startapppool-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-startapppool-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -688,7 +688,7 @@
         <procedure>
             <procedureName>StopAppPool</procedureName>
             <description>Stops an Application Pool.</description>
-            <jobNameTemplate>iis7-stopapppool-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-stopapppool-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -766,7 +766,7 @@
         <procedure>
             <procedureName>AssignAppToAppPool</procedureName>
             <description>Assigns an application to an application pool.</description>
-            <jobNameTemplate>iis7-assignapptoapppool-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-assignapptoapppool-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -880,7 +880,7 @@
 		<procedure>
             <procedureName>DeployCopy</procedureName>
             <description>Use XCOPY to deploy Web Site or ASP.NET Application</description>
-            <jobNameTemplate>iis7-deploycopy-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis7-deploycopy-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -994,7 +994,7 @@
         <procedure>
             <procedureName>CheckServerStatus</procedureName>
             <description>Check the HTTP status of a given URL</description>
-            <jobNameTemplate>iis7-checkserverstatus-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-checkserverstatus-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1102,7 +1102,7 @@
         <procedure>
             <procedureName>CreateVirtualDirectory</procedureName>
             <description>Creates a virtual directory into the specified WebSite.</description>
-            <jobNameTemplate>iis7-createvirtualdir-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-createvirtualdir-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1218,7 +1218,7 @@
         <procedure>
             <procedureName>DeleteVirtualDirectory</procedureName>
             <description>Deletes a virtual directory into the specified WebSite.</description>
-            <jobNameTemplate>iis7-deletevirtualdir-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-deletevirtualdir-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1297,7 +1297,7 @@
         <procedure>
             <procedureName>CreateWebApplication</procedureName>
             <description>Creates an application in IIS 7</description>
-            <jobNameTemplate>iis7-createwebapp-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-createwebapp-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1413,7 +1413,7 @@
         <procedure>
             <procedureName>DeleteWebApplication</procedureName>
             <description>Deletes a web application into the specified WebSite.</description>
-            <jobNameTemplate>iis7-deletewebapp-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-deletewebapp-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1492,7 +1492,7 @@
         <procedure>
             <procedureName>ListSites</procedureName>
             <description>List the sites on a web server.</description>
-            <jobNameTemplate>iis7-listsites-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-listsites-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1571,7 +1571,7 @@
         <procedure>
             <procedureName>ListSiteApps</procedureName>
             <description>View the apps of a WebSite</description>
-            <jobNameTemplate>iis7-listsiteapps-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-listsiteapps-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1650,7 +1650,7 @@
         <procedure>
             <procedureName>CreateWebSite</procedureName>
             <description>Create a WebSite.</description>
-            <jobNameTemplate>iis7-createwebsite-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-createwebsite-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1783,7 +1783,7 @@
         <procedure>
             <procedureName>DeleteWebSite</procedureName>
             <description>Delete a WebSite.</description>
-            <jobNameTemplate>iis7-deletewebsite-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-deletewebsite-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1861,7 +1861,7 @@
         <procedure>
             <procedureName>AddWebSiteBinding</procedureName>
             <description>Add a binding to a WebSite.</description>
-            <jobNameTemplate>iis7-addwebsitebinding-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-addwebsitebinding-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
@@ -1975,7 +1975,7 @@
         <procedure>
             <procedureName>DeleteAppPool</procedureName>
             <description>Delete an Application Pool.</description>
-            <jobNameTemplate>iis7-deleteapppool-$[/increment /myJob/project/jobCounter]</jobNameTemplate>
+            <jobNameTemplate>iis-deleteapppool-$[jobId]</jobNameTemplate>
             <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
             <propertySheet>
 				<property>
