@@ -1270,6 +1270,12 @@
 
         <h1>Release Notes</h1>
 
+        <h2>@PLUGIN_KEY@-2.0.5</h2>
+
+        <ul>
+            <li>Removed the unused file IISServer.pm file and its references.</li>
+        </ul>
+
 		<h2>@PLUGIN_KEY@-2.0.4</h2>
 
 		<ul>
