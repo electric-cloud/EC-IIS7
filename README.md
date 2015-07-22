@@ -1,7 +1,7 @@
-@PLUGIN_KEY@
+EC-IIS7
 ============
 
-The ElectricFlow @PLUGIN_NAME@ integration
+The ElectricFlow IIS7 integration
 
 ## Compile ##
 
