@@ -16,28 +16,50 @@
 
 
 push (@::gMatchers,
-  
+
   {
    id =>        "appDeleted",
    pattern =>          q{APP object "(.+)" deleted},
    action =>           q{
-    
-              my $description = "Web Application $1 \n deleted successfully";
-              setProperty("summary", $description . "\n");
-    
+
+              setProperty("outcome", "success");
+              setProperty("summary", "Web Application $1 deleted successfully\n");
+
    },
   },
-  
+
    {
    id =>        "appNotFound",
-   pattern =>          q{ERROR \( message:(.+)\)},
+   pattern =>          q{ERROR \( message:Cannot find APP object with identifier (.+)\)},
    action =>           q{
-    
-              my $description = "$1";
-              setProperty("summary", $description . "\n");
-    
+
+              setProperty("outcome", "warning");
+              setProperty("summary", "Application $1 not found\n");
+
    },
   },
-  
+
+   {
+   id =>        "appNotSpecified",
+   pattern =>          q{ERROR \( message:Must.+APP.+with},
+   action =>           q{
+
+              setProperty("outcome", "warning");
+              setProperty("summary", "Application name not specified\n");
+
+   },
+  },
+
+   {
+   id =>        "error",
+   pattern =>          q{ERROR \( message:(.+). \)},
+   action =>           q{
+
+              setProperty("outcome", "error");
+              setProperty("summary", "$1\n");
+
+   },
+  },
+
 );
 

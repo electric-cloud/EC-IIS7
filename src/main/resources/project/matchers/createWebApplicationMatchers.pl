@@ -16,28 +16,38 @@
 
 
 push (@::gMatchers,
-  
+
   {
    id =>        "appCreated",
    pattern =>          q{APP object "(.+)" added},
    action =>           q{
-    
-              my $description = "Web Application $1 \n created successfully";
-              setProperty("summary", $description . "\n");
-    
+
+              setProperty("outcome", "success");
+              setProperty("summary", "Web Application $1 created successfully\n");
+
    },
   },
-  
-    {
+
+  {
+   id => "warning",
+   pattern => q{ERROR \( message:Failed to add duplicate collection element (.+)\)},
+   action => q{
+
+              setProperty("outcome", "warning");
+              setProperty("summary", "Duplicate collection element $1\n");
+
+   },
+  },
+
+  {
    id =>        "error",
    pattern =>          q{ERROR \( message:(.+)\)},
    action =>           q{
-    
-              my $description = "$1";
-              setProperty("summary", $description . "\n");
-    
+
+              setProperty("outcome", "error");
+              setProperty("summary", "$1\n");
+
    },
   },
-  
-);
 
+);

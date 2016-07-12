@@ -3,27 +3,23 @@
 //
 // Gradle build script for EC-IIS7 plugin.
 //
-// Copyright (c) 2015 Electric Cloud, Inc.
+// Copyright (c) 2016 Electric Cloud, Inc.
 // All rights reserved
 
 buildscript {
-    repositories {
-	maven {
-		url 'http://dl.bintray.com/ecpluginsdev/maven'
-	}
+	repositories {
+		maven { url 'http://dl.bintray.com/ecpluginsdev/maven' }
 
-	jcenter()
-    }
-    dependencies {
-        classpath group: 'com.electriccloud.plugins', name: 'flow-gradle-plugin', version: '+'
+		jcenter()
+	}
+	dependencies {
+		classpath group: 'com.electriccloud.plugins', name: 'flow-gradle-plugin', version: '+'
 		classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
-    }
+	}
 }
 
 repositories {
-	maven {
-		url "https://oss.sonatype.org/content/repositories/snapshots"
-	}
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
 }
 
 group = "com.electriccloud"
@@ -31,17 +27,10 @@ description = "Plugins : EC-IIS7"
 version = "2.0.7"
 
 apply plugin: 'flow-gradle-plugin'
-apply plugin: 'license'
 
 license {
-    header = file ('shortHeader.txt')
-    exclude "**/project.xml"
-} 
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '2.3'
+	header = file ('shortHeader.txt')
+	exclude "**/project.xml"
 }
 
-gwt {
-	modules 'ecplugins.iis.ConfigurationManagement'
-}
+task wrapper(type: Wrapper) { gradleVersion = '2.14' }

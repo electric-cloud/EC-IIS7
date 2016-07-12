@@ -132,19 +132,6 @@
  
     print $content;
     
-    #evaluates if exit was successful to mark it as a success or fail the step
-    if($? == SUCCESS){
-     
-        $::gEC->setProperty("/myJobStep/outcome", 'success');
-        
-        if($content !~ m/APP object "(.+)" added/){
-            $::gEC->setProperty("/myJobStep/outcome", 'error');
-        }
-        
-    }else{
-        $::gEC->setProperty("/myJobStep/outcome", 'error');
-    }
-
     #add masked command line to properties object
     $props{'cmdLine'} = $cmdLine;
     
