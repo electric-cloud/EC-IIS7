@@ -6,6 +6,12 @@
         <description>Integration with IIS</description>
         <workspaceName/>
         <propertySheet>
+            <!-- Improvement for ECPAPPSERVERIISSEVEN-15 -->
+            <property>
+                <propertyName>ec_icon</propertyName>
+                <value>images/icon-plugin.svg</value>
+            </property>
+            <!-- End of improvement for ECPAPPSERVERIISSEVEN-15 -->
             <property>
                 <propertyName>ui_forms</propertyName>
                 <description>Property sheet to hold XML specification for forms</description>
